@@ -1,0 +1,60 @@
+version: '2.0'
+stories:
+  - story: welcome path + yes
+    steps:
+      - intent: welcome_intent
+      - action: utter_anxiety_0
+      - action: utter_anxiety_1
+      - action: utter_anxiety_2
+      - action: utter_anxiety_3
+      - intent: yes_intent
+      - action: utter_anxiety_4
+      - action: anxietystate_form
+      - action: utter_anxiety_6
+      - action: utter_anxiety_7
+      - action: utter_anxiety_8
+      - action: utter_anxiety_9
+
+  - story: welcome path + no
+    steps:
+      - intent: welcome_intent
+      - action: utter_anxiety_0
+      - action: utter_anxiety_1
+      - action: utter_anxiety_2
+      - action: utter_anxiety_3
+      - intent: no_intent
+      - action: utter_anxiety_no_1
+      - action: utter_anxiety_no_2
+      - action: utter_end_note
+
+
+  - story: end note
+    steps:
+      - intent: end_note
+      - action: utter_end_note
+
+
+#________________________________________Lateral part of the code________________________________________
+
+  - story: gad7_qna_path-intent-0
+    steps:
+      - intent: gad7_qna_path-intent-0
+      - action: utter_gad7_qna_path-intent-0
+      - action: utter_p1_path_1
+      - action: action_final_score
+      - intent: p1_path_2
+      - action: action_final_score
+      - intent: p1_path_3
+      - action: action_final_score
+      - intent: p1_path_4
+      - action: action_final_score
+      - intent: p1_path_5
+      - action: action_final_score
+      - intent: p1_path_6
+      - action: action_final_score
+      - intent: p1_path_7
+      - action: action_final_score
+      - intent: p1_path_8
+      - action: action_final_score
+      - intent: continue_path
+      - action: action_final_score

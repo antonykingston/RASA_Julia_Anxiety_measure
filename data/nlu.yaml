@@ -1,0 +1,114 @@
+version: '2.0'
+nlu:
+  - intent: welcome_intent
+    examples: |
+      - hey
+      - hello
+      - hi
+      - heyya
+      - heyy
+      - wassup
+      - hello there
+      - hey there
+      - hey dude
+      - hii
+      - halo
+  - intent: yes_intent
+    examples: |
+      - well yes
+      - well yeah
+      - yes thats my life
+      - yeah what can I do
+      - Hmm ya
+      - Yah
+      - Yah it is
+      - Yup it is
+      - Yup
+      - Ya it is
+      - Yes, it is
+      - Yes it is
+      - Yes
+      - sssss
+      - Yeah
+      - Ya
+      - S
+      - Yes, let's go
+      - Yessss
+      - Yesss
+      - Yess
+      - Yes I am in!
+      - yeah sure
+      - yes
+      - yeah definitely
+      - definitely
+  - intent: no_intent
+    examples: |
+      - No I am not
+      - No No No
+      - Noooo
+      - Nayy
+      - Nay
+      - Nah
+      - no
+      - no way
+      - nah
+      - not at all
+      - not interested
+      - not really
+      - nopee
+      - i don't know
+  - intent: maybe_intent
+    examples: |
+      - apparently
+      - as likely as not
+      - as the case may be
+      - assumably
+      - believably
+      - dollars to doughnuts
+      - doubtless
+      - expediently
+      - feasibly
+      - imaginably
+      - in all likelihood
+      - in all probability
+      - like enough
+      - maybe
+      - most likely
+      - one can assume
+      - perchance
+      - perhaps
+      - plausibly
+      - possibly
+      - practicably
+      - presumably
+      - presumptively
+      - reasonably
+      - seemingly
+      - to all appearances
+      - imaginably
+      - likely
+      - maybe
+      - possibly
+      - probably
+      - God willing
+      - at all
+      - by any chance
+      - by any means
+      - conceivably
+      - could be
+      - if possible
+      - in any way
+      - likely
+      - peradventure
+      - perchance
+      - perhaps
+      - probably
+      - as it may be
+      - as the case may be
+      - conceivably
+      - feasibly
+      - for all one knows
+      - imaginably
+      - it may be
+      - actually not sure
+      - perchance

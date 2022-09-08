@@ -1,0 +1,236 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true 
+intents:
+  - welcome_intent
+  - yes_intent
+  - no_intent
+  - maybe_intent
+  - gad7_qna_path-intent-0
+  - p1_path_1
+  - p1_path_2
+  - p1_path_3
+  - p1_path_4
+  - p1_path_5
+  - p1_path_6
+  - p1_path_7
+  - p1_path_8
+  - continue_path
+  - end_note
+
+entities:
+- anxietystate_entity
+- good_entity
+- average_entity
+- bad_entity
+- worse_entity
+
+slots:
+  anxietystate_slot:
+    type: unfeaturized
+    auto_fill: false
+
+actions:
+  - action_final_score
+
+forms:
+  - anxietystate_form
+
+responses:
+  utter_anxiety_0:
+  - text: Hi i'm Julia, your own health assistant!
+    image: 'https://c.tenor.com/zTKB-sgR15sAAAAC/smile-eyes-smiley.gif'
+  utter_anxiety_1:
+  - text: I am here to help you understand your lever of anxiety.
+  utter_anxiety_2:
+  - text: And support you as you work through the process to overcome it.
+  utter_anxiety_3:
+  - text: Shall we begin?
+
+
+  utter_anxiety_4:
+  - text: That's great
+  utter_ask_anxietystate_slot:
+  - text: 'May I know what is it that is making you feel anxious ?'
+  utter_anxiety_5:
+  - text: 'So, "{anxietystate_slot}" in the reason !' 
+  utter_anxiety_6:
+  - text: 'Don''t worry! I am here to help you.'
+  utter_anxiety_7:
+  - text: 'To understand your state of mind better, I have some questions...'
+  utter_anxiety_8:
+  - text: 'This will help me assist you too measure the anxiety level.'
+  utter_anxiety_9:
+  - buttons:
+    - payload: "/gad7_qna_path-intent-0"
+      title: 'Okay'
+    text: 'Try to be as accurate as possible...'
+
+
+  utter_anxiety_no_1:
+  - text: that's alright
+  utter_anxiety_no_2:
+  - text: you can come again later.
+
+
+
+#__________________________________________________ lateral part __________________________________________________
+
+
+
+
+  utter_gad7_qna_path-intent-1:
+  - text: 'I see'
+  utter_gad7_qna_path-intent-2:
+  - text: 'Hmmm..'
+  utter_gad7_qna_path-intent-3:
+  - text: 'Mhmm.. I am hearing you &#128066; '
+  utter_gad7_qna_path-intent-4:
+  - text: 'Hmmm.. Got it'
+
+  utter_gad7_qna_path-intent-0:
+  - text: 'We are on this journey together &#128170;'
+  utter_p1_path_1:
+  - buttons:
+    - payload: '/p1_path_2{{"good_entity": "Good"}}'
+      title: Not at all
+    - payload: '/p1_path_2{{"average_entity": "Average"}}'
+      title: Several days
+    - payload: '/p1_path_2{{"bad_entity": "Bad"}}'
+      title: More than half days
+    - payload: '/p1_path_2{{"worse_entity": "Worse"}}'
+      title: Nearly everyday
+    text: How often would you say you have been feeling nervous or worried?
+  utter_p1_path_2:
+  - buttons:
+    - payload: '/p1_path_3{{"good_entity": "Good"}}'
+      title: Not at all
+    - payload: '/p1_path_3{{"average_entity": "Average"}}'
+      title: Several days
+    - payload: '/p1_path_3{{"bad_entity": "Bad"}}'
+      title: More than half days
+    - payload: '/p1_path_3{{"worse_entity": "Worse"}}'
+      title: Nearly everyday
+    text: How often have you been feeling like you cannot stop worrying?
+  utter_p1_path_3:
+  - buttons:
+    - payload: '/p1_path_4{{"good_entity": "Good"}}'
+      title: Not at all
+    - payload: '/p1_path_4{{"average_entity": "Average"}}'
+      title: Several days
+    - payload: '/p1_path_4{{"bad_entity": "Bad"}}'
+      title: More than half days
+    - payload: '/p1_path_4{{"worse_entity": "Worse"}}'
+      title: Nearly everyday
+    text: How often have you felt like you were worrying about too many things?
+  utter_p1_path_4:
+  - buttons:
+    - payload: '/p1_path_5{{"good_entity": "Good"}}'
+      title: Not at all
+    - payload: '/p1_path_5{{"average_entity": "Average"}}'
+      title: Several days
+    - payload: '/p1_path_5{{"bad_entity": "Bad"}}'
+      title: More than half days
+    - payload: '/p1_path_5{{"worse_entity": "Worse"}}'
+      title: Nearly everyday
+    text: How often these days have you had trouble relaxing?
+  utter_p1_path_5:
+  - buttons:
+    - payload: '/p1_path_6{{"good_entity": "Good"}}'
+      title: Not at all
+    - payload: '/p1_path_6{{"average_entity": "Average"}}'
+      title: Several days
+    - payload: '/p1_path_6{{"bad_entity": "Bad"}}'
+      title: More than half days
+    - payload: '/p1_path_6{{"worse_entity": "Worse"}}'
+      title: Nearly everyday
+    text: How often have you felt so restless that it was hard to sit still?
+  utter_p1_path_6:
+  - buttons:
+    - payload: '/p1_path_7{{"good_entity": "Good"}}'
+      title: Not at all
+    - payload: '/p1_path_7{{"average_entity": "Average"}}'
+      title: Several days
+    - payload: '/p1_path_7{{"bad_entity": "Bad"}}'
+      title: More than half days
+    - payload: '/p1_path_7{{"worse_entity": "Worse"}}'
+      title: Nearly everyday
+    text: How often have you noticed yourself being easily irritated?
+  utter_p1_path_7:
+  - buttons:
+    - payload: '/p1_path_8{{"good_entity": "Good"}}'
+      title: Not at all
+    - payload: '/p1_path_8{{"average_entity": "Average"}}'
+      title: Several days
+    - payload: '/p1_path_8{{"bad_entity": "Bad"}}'
+      title: More than half days
+    - payload: '/p1_path_8{{"worse_entity": "Worse"}}'
+      title: Nearly everyday
+    text: How often have feared that something awful was going to happen?
+  utter_p1_path_8:
+  - buttons:
+    - payload: '/continue_path{{"good_entity": "Good"}}'
+      title: Not at all
+    - payload: '/continue_path{{"average_entity": "Average"}}'
+      title: Several days
+    - payload: '/continue_path{{"bad_entity": "Bad"}}'
+      title: More than half days
+    - payload: '/continue_path{{"worse_entity": "Worse"}}'
+      title: Nearly everyday
+    text: |-
+      How often have you found it difficult to fall asleep at night?
+
+  utter_gad7_anxiety-intent-0:
+  - text: 'Thanks for answering all my questions so patiently.'
+  utter_gad7_anxiety-intent-1:
+  - text: 'Mind that this is only a primary screening and not the final diagnosis. '
+
+
+  utter_gad7_no_anxiety-intent-0:
+  - text: 'From your answers, I have found that you have no anxiety'
+  utter_gad7_no_anxiety-intent-1:
+  - text: 'That''s great news!'
+
+  utter_gad7_mild_anxiety-intent-0:
+  - text: 'From your answers, I have found that you have low anxiety '
+
+
+  utter_gad7_moderate_anxiety-intent-0:
+  - text: 'From your answers, I have found that you have moderate anxiety '
+
+
+  utter_gad7_moderatelysevere_anxiety-intent-0:
+  - text: 'From your answers, I have found that you have moderately severe anxiety'
+
+
+  utter_gad7_severe_anxiety-intent-0:
+  - text: 'From your answers, I see that you are highly anxiety'
+  utter_gad7_severe_anxiety-intent-1:
+  - text: 'It must be hard to constantly have these negative thoughts play out in your mind'
+  utter_gad7_severe_anxiety-intent-2:
+  - text: 'But I want you to remember you have the strength to overcome this and I know you will'
+
+
+  utter_self_help_intro:
+  - text: 'I know this may seem scary, but I assure I am always here for you'
+  utter_self_help_intro_1:
+  - text: 'Low to moderately severe anxiety can be treated with some simple activities.'
+  utter_self_help_intro_2:
+  - text: 'Reach out to a clinical councellor and get guided from them.'
+  utter_self_help_intro_3:
+  - buttons:
+    - payload: /end_note
+      title: 'Ok'
+    text: 'After that, I have no doubt that your life will feel renewed.'
+
+  utter_end_note:
+  - text: |
+      Thanks for trying Julia Bot
+
+
+      https://github.com/antonykingston
+
+
+  utter_fallback:
+  - text: Could you please rephrase it again!

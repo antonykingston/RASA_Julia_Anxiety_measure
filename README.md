@@ -1,4 +1,4 @@
-# This is a very Basic RASA bot (Julia)
+# This is a RASA bot (Julia)
 
 <p align="center"><img src="https://i.ibb.co/JkTQ3PQ/JULIA-Bot-1.png"></p>
 
